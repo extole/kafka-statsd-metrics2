@@ -16,18 +16,20 @@
 
 package com.airbnb.metrics;
 
+import java.util.regex.Pattern;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.yammer.metrics.core.Metric;
 import com.yammer.metrics.core.MetricName;
 import com.yammer.metrics.core.MetricPredicate;
-import org.apache.log4j.Logger;
-
-import java.util.regex.Pattern;
 
 /**
  *
  */
 public class ExcludeMetricPredicate implements MetricPredicate {
-  private final Logger logger = Logger.getLogger(getClass());
+   private static final Logger logger = LoggerFactory.getLogger(ExcludeMetricPredicate.class);
 
   final String excludeRegex;
   final Pattern pattern;
