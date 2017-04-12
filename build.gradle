@@ -8,8 +8,8 @@ buildscript {
 }
 
 ext {
-    kafkaVersion = "0.10.2.0"
-    scalaVersion = "2.11"
+    kafkaVersion = "0.10.1.1"
+    scalaVersion = "2.10"
 }
 
 defaultTasks 'build'
